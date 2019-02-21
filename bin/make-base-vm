@@ -4,7 +4,7 @@ set -e
 DISTRO=ubuntu
 SUITE=xenial
 ARCH=amd64
-MIRROR_BASE=http://${MIRROR_HOST:-127.0.0.1}:3142
+MIRROR_BASE=http:/
 LXC=0
 VBOX=0
 DOCKER=0
