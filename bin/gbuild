@@ -147,7 +147,7 @@ EOF" if build_desc["sudo"] and @options[:allow_sudo]
       raise "error looking up author date in #{dir}" unless $?.exitstatus == 0
 
       system! "copy-to-target #{@quiet_flag} inputs/#{dir} build/"
-      script.puts "(cd build/#{dir} && git reset -q --hard && git clean -q -f -d && chmod 775 depends/config.*)"
+      script.puts "(cd build/#{dir} && git reset -q --hard && git clean -q -f -d)"
     end
     script.puts
     ref_datetime = build_desc["reference_datetime"] || author_date
